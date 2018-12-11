@@ -1,0 +1,25 @@
+{
+  "name": "node-app-with-redis-cache",
+  "version": "1.0.0",
+  "description": "Super fast web application in nodejs using redis cache",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamrat17/node-app-with-redis-cache.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shamrat17/node-app-with-redis-cache/issues"
+  },
+  "homepage": "https://github.com/shamrat17/node-app-with-redis-cache#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "redis": "^2.8.0"
+  }
+}
