@@ -1,0 +1,9 @@
+kind: pipeline
+name: default
+
+steps:
+- name: build
+  image: node:8.12
+  commands:
+  - npm install
+  - node server.js
