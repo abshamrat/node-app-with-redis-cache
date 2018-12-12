@@ -19,6 +19,7 @@
   "homepage": "https://github.com/shamrat17/node-app-with-redis-cache#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
     "express": "^4.16.4",
     "redis": "^2.8.0"
   }
