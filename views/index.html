@@ -54,6 +54,7 @@
     const datePicker = document.querySelector("#rateDate");
     const form = document.querySelector("#rateForm");
     const submitButton = document.querySelector("#rateForm button");
+    const visitsDiv = document.querySelector("#visits-count");
     form.onsubmit = e => {
         e.preventDefault()
         submitButton.classList.add("is-loading");
@@ -64,6 +65,7 @@
         axios.get(url).then(response => {
             submitButton.classList.remove("is-loading");
             showRates(response.data.rates);
+            showVisits(response.data.count, date);
         }).catch(error => {
             console.log(error);
         });
@@ -81,6 +83,14 @@
 
         document.querySelector("#results").innerHTML = html;
     }
+    function showVisits(count, date) {
+            let html = `
+        The rates as at <strong>${date}</strong> 
+        have been checked <strong>${count}</strong> time(s).
+    `;
+            visitsDiv.classList.remove("is-hidden");
+            visitsDiv.innerHTML = html
+        } 
     // IIFE - Executes on page load
     (function () {
         // set today's date as default date
