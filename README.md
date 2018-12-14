@@ -12,11 +12,20 @@ When trying to optimise our applications, one of the first things we look to is 
 - Saved data to, and retrieved data from the Redis store using the node redis client.
 
 ## Quick start 
-- Assumed you have 8 >= Node.js
+- Assumed you have 8 >= Node.js and Redis installed
+- Run redis server (If not then run `docker run --name redis -p 6379:6379 -d redis`)
 - Now clone the repository `https://github.com/shamrat17/node-app-with-redis-cache.git`
 - Hit `cd node-app-with-redis-cache`
 - Install all dependency `npm install`
 - Start server `npm start`
+
+## See the magic
+Open you browser and go `localhost:5000` you might see somethings like
+<img src='./public/images/currency.png'/>
+Now select date and press `Get rates` button. You will see it takes some moments to get the result from server
+<img src='./public/images/currency_loading.png'/>
+After getting response hit again `Get rates` button and watch how faster it retrives 
+
 
 Helper link [here](https://blog.manifold.co/build-super-fast-apps-in-node-js-using-redis-cache-d3d55bbdc375)
 
